@@ -15,3 +15,12 @@ Run the last command as root.
 
 $ j=0;while true; do let j=$j+1; for i in $(seq 0 20 100); do echo $i;sleep 1; done | dialog --gauge "Install part $j : `sed $(perl -e "print int rand(99999)")"q;d" /usr/share/dict/words`" 6 40;done
 Pretend to be busy in the office to enjoy a cup of coffee (http://www.commandlinefu.com/commands/view/6771/pretend-to-be-busy-in-office-to-enjoy-a-cup-of-coffee).
+
+$ find . -mtime +30 -type d -delete
+Delete all folders older than 30 days.
+
+$ import logging
+$ l = logging.getLogger('django.db.backends')
+$ l.setLevel(logging.DEBUG)
+$ l.addHandler(logging.StreamHandler())
+Turn on django database logging in ipdb.
