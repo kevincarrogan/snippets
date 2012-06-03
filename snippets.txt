@@ -24,3 +24,5 @@ $ l = logging.getLogger('django.db.backends')
 $ l.setLevel(logging.DEBUG)
 $ l.addHandler(logging.StreamHandler())
 Turn on django database logging in ipdb.
+
+#python tip:  When using regexes with named groups, use mo.lastgroup to identify which group made the match.
