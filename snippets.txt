@@ -26,3 +26,10 @@ $ l.addHandler(logging.StreamHandler())
 Turn on django database logging in ipdb.
 
 #python tip:  When using regexes with named groups, use mo.lastgroup to identify which group made the match.
+
+import pdb
+    for attr in ('stdin', 'stdout', 'stderr'):
+        setattr(sys, attr, getattr(sys, '__%s__' % attr))
+     ''' put the above lines towards the beginning
+        put the line below, where you want to get started with shell'''
+     pdb.set_trace()
